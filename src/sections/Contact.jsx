@@ -62,7 +62,7 @@ export default function Contact() {
 
   if (sent)
     return (
-      <section className="py-8 text-center flex flex-col items-center transition-colors duration-500">
+      <section className="py-50 text-center flex flex-col items-center transition-colors duration-500">
         <script src="https://cdn.lordicon.com/lordicon.js"></script>
         <lord-icon
           src="https://cdn.lordicon.com/dhzbkemf.json"
