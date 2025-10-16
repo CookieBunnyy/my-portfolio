@@ -185,14 +185,14 @@ export default function About() {
               <motion.div
                 whileHover={{ y: -3, rotate: -10 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                className="text-primary dark:text-green-400 group-hover:text-white"
+                className="text-primary dark:text-green-400 group-hover:text-white dark:group-hover:text-white"
               >
                 {icon}
               </motion.div>
               <span className="font-medium group-hover:text-white">{name}</span>
             </motion.div>
           ))}
-        </div>
+        </div>e
       </div>
     </section>
   );
