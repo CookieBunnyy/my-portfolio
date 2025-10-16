@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Mail, User, MessageSquare, Github, Facebook, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
+import Loader from "@/components/Loader";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(null); // null, "success", "error"
+  const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,7 +32,7 @@ export default function Contact() {
     return e;
   }
 
-  // Handle form submission
+  // Submit form via EmailJS
   const onSubmit = async (ev) => {
     ev.preventDefault();
     const eValidation = validate();
